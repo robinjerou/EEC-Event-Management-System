@@ -1,0 +1,173 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('../resources/general-bg.png') repeat center center fixed;
+    background-size: cover;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(253, 131, 6, 0.8);
+    position: absolute;
+    top: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.logo-text {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+.title {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(184, 0, 0, 0.8); /* Background color for the logout button */
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+    background-color: rgba(179, 0, 0, 0.8);
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(37, 154, 155, 0.8);
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(25, 104, 105, 0.8);
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Adjust to accommodate the header */
+    padding: 20px;
+    width: 100%;
+}
+
+.table-data {
+    width: calc(100% - 40px); /* Full width minus 20px margin on each side */
+    max-width: 1000px; /* Optional: Set a maximum width for better readability */
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    overflow: auto; /* Enable vertical scrolling */
+    max-height: 75vh; /* Adjust as needed */
+}
+
+.order .head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-box {
+    flex-grow: 1; /* Fill the remaining space */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    flex-grow: 1; /* Fill the remaining space */
+    padding: 10px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-box button {
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(37, 154, 155, 0.8);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: rgba(25, 104, 105, 0.8);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background-color: rgba(253, 131, 6, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody td img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+tbody td p {
+    display: inline;
+    vertical-align: middle;
+}

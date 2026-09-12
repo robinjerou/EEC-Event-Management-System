@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check Out - The Perfect Paws PH</title>
+  <link rel="icon" type="image/x-icon" href="assets/resources/favicon.png">
+  <link rel="stylesheet" href="assets/css/pos-invoice-style.css">
+</head>
+<body>
+  <header class="banner">
+    <div class="logo-container">
+      <img src="assets/resources/logo.png" alt="Logo" class="logo">
+      <div class="logo-text">
+      <!-- Username Here -->
+      </div>
+    </div>
+    <h1 class="title">Check Out</h1>
+    <a href="main-login.html" class="logout">Log Out</a>
+  </header>
+
+  <div class="container">
+    <form action="assets/php/pos-generate-receipt.php" method="post">
+      <div class="summary">
+          <h3>Total: <span id="total">0.00</span></h3>
+          <h3>Cash: <input type="text" id="cash" name="cash" class="input-field"></h3>
+          <h3>Change: <input type="text" id="change" name="change" class="input-field" readonly></h3>
+      </div>
+      <div class="form-field">
+          <input type="submit" id="receipt-button" value="Generate Receipt" class="receipt-button">
+      </div>
+    </form>
+    <div class="form-field">
+        <a href="pos-billing-system.html" class="back-button">Back to Products</a>
+    </div>
+  </div>
+
+  <script src="assets/js/get-user-info.js"></script>
+  <script src="assets/js/pos-generate-calculate-change.js"></script>
+  <script src="assets/js/pos-generate-obtain-price.js"></script>
+</body>
+</html>

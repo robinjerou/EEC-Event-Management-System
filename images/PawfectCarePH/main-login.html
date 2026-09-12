@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Log In - The Perfect Paws PH</title>
+    <link rel="icon" type="image/x-icon" href="assets/resources/favicon.png">
+    <link rel="stylesheet" href="assets/css/login-style.css">
+</head>
+<body>
+    <video autoplay loop muted id="video-background">
+        <source src="assets/resources/ls-bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="container">
+        <div class="logo">
+            <img src="assets/resources/logo.png" alt="Logo">
+        </div>
+        <form id="loginForm" class="form" method="POST" action="assets/php/main-login-validation.php">
+            <h2>Login</h2>
+            <h3>Employee Login</h3>
+            <div class="form-field">
+                <input type="text" placeholder="Email Address" name="email" id="email" autocomplete="off" class="input-field" required>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <input type="password" placeholder="Password" name="password" id="password" autocomplete="off" class="input-field" required>
+                <small></small>
+            </div>
+
+            <div class="form-field">
+                <button type="button" class="login" onclick="setAction('pos-billing-system.html')">POS Login</button>
+            </div>
+            <div class="form-field">
+                <button type="button" class="login" onclick="setAction('ims-menu.html')">Inventory Login</button>
+            </div>
+        </form>
+    </div>
+    <script src="assets/js/main-login-validation.js"></script>
+    <script>
+        function setAction(action) {
+            const form = document.getElementById('loginForm');
+            const actionInput = document.createElement('input');
+            actionInput.type = 'hidden';
+            actionInput.name = 'action';
+            actionInput.value = action;
+            form.appendChild(actionInput);
+            form.submit();
+        }
+    </script>
+</body>
+</html>

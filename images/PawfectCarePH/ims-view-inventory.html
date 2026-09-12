@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Inventory</title>
+    <link rel="icon" type="image/x-icon" href="assets/resources/favicon.png">
+    <link rel="stylesheet" href="assets/css/view-inventory-style.css">
+</head>
+
+<body>
+    <header class="banner">
+        <div class="logo-container">
+            <img src="assets/resources/logo.png" alt="Logo" class="logo">
+            <a href="ims-menu.html" class="back-button">Back</a>
+            <div class="logo-text">
+                <!-- Username Here -->
+            </div>
+        </div>
+        <h1 class="title">View Inventory</h1>
+        <a href="main-login.html" class="logout">Log Out</a>
+    </header>
+
+    <div class="content">
+        <div class="table-data">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Name</th>
+                        <th>Price (₱)</th>
+                        <th>Quantity</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                    <!-- Products will be dynamically loaded here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="assets/js/ims-fetch-products.js"></script>
+    <script src="assets/js/get-user-info.js"></script>
+</body>
+</html>

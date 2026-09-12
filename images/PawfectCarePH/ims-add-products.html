@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Product</title>
+    <link rel="icon" type="image/x-icon" href="assets/resources/favicon.png">
+    <link rel="stylesheet" href="assets/css/menu-style.css">
+    <link rel="stylesheet" href="assets/css/add-products-style.css">
+</head>
+<body>
+    <header class="banner">
+        <div class="logo-container">
+            <img src="assets/resources/logo.png" alt="Logo" class="logo">
+            <a href="ims-menu.html" class="back-button">Back</a>
+            <div class="logo-text">
+                Welcome, Placeholder
+                <!-- Username Here -->
+            </div>
+        </div>
+        <h1 class="title">Add Products</h1>
+        <a href="main-login.html" class="logout">Log Out</a>
+    </header>
+    
+    <div class="content">
+        <div class="card">
+            <div class="card-header">
+                <h2>Add New Item</h2>
+            </div>
+            <div class="card-body">
+                <form action="assets/php/ims-add-products.php" method="POST" class="add-item-form">
+                    <div class="form-group">
+                        <label for="productName">Product Name:</label>
+                        <input type="text" id="productName" name="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productSize">Product Size (Pcs, Chews):</label>
+                        <input type="text" id="productSize" name="productSize" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productPrice">Product Price:</label>
+                        <input type="number" id="productPrice" name="productPrice" step="0.01" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="productQuantity">Product Quantity:</label>
+                        <input type="number" id="productQuantity" name="productQuantity" min="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imgDir">Image Directory:</label>
+                        <input type="text" id="imgDir" name="imgDir" required>
+                    </div>
+                    <button type="submit" class="add-item-btn">Add Item</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/get-user-info.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS - The Perfect Paws PH</title>
+    <link rel="icon" type="image/x-icon" href="Pictures/FavIcon.png">
+    <link rel="stylesheet" href="assets/css/pos-system-style.css">
+</head>
+<body>
+    <header class="banner">
+        <div class="logo-container">
+            <img src="assets/resources/logo.png" alt="Logo" class="logo">
+            <div class="logo-text">
+                <!-- Username Here -->
+            </div>
+        </div>
+        <h1 class="title">POS </h1>
+        <a href="main-login.html" class="logout">Log Out</a>
+    </header>
+        
+    <div class="main-container">
+        <section class="product-section">
+            <h2>Products</h2>
+            <div class="product-list">
+                <!-- Product items will be dynamically added here -->
+            </div>
+        </section>
+        
+        <section class="billing-section">
+            <h2>Billing Section</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>QTY</th>
+                        <th>Price</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </tbody>
+            </table>
+
+            <div class="subtotal">
+                <p>Total: ₱<span id="total">0</span></p>
+            </div>
+
+            <div class="actions">
+                <form action="assets/php/pos-billing-to-checkout-process.php" method="post">
+                    <input type="hidden" id="cart-items-input" name="cartItems">
+                    <button type="submit" id="checkout-button" name="checkout">Check Out</button>
+                </form>                
+            </div>
+        </section>
+    </div>
+
+    <script src="assets/js/pos-billing-fetch-products.js"></script>
+    <script src="assets/js/pos-billing-cart-items.js"></script>
+    <script src="assets/js/get-user-info.js"></script>
+</body>
+</html>

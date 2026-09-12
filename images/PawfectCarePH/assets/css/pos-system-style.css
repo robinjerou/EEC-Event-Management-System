@@ -1,0 +1,181 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url('../resources/general-bg.png') repeat center center fixed;
+    background-size: cover;
+}
+
+.banner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(253, 131, 6, 0.8);
+    position: absolute;
+    top: 0;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px; /* Adjust the size of the logo */
+    height: 50px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.logo-text {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+.title {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin: 0;
+}
+
+.logout {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(184, 0, 0, 0.8); /* Background color for the logout button */
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.logout:hover {
+    background-color: rgba(179, 0, 0, 0.8);
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(37, 154, 155, 0.8);
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgba(25, 104, 105, 0.8);
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px;
+    overflow: auto; /* Enable vertical scrolling */
+    max-height: 75vh; /* Adjust as needed */
+}
+
+.product-section, .billing-section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 45%;
+    overflow: auto; /* Enable vertical scrolling */
+    max-height: 75vh; /* Adjust as needed */
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-item {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+    background-color: rgba(25, 104, 105, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; /* Ensures columns have fixed widths */
+}
+
+thead th {
+    background-color: rgba(37, 154, 155, 0.8);
+    color: white;
+    padding: 10px;
+    word-wrap: break-word; /* Ensures text wraps in header cells */
+}
+
+tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    word-wrap: break-word; /* Ensures text wraps in body cells */
+}
+
+.subtotal {
+    margin-top: 20px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#clear-cart-button {
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+}
+
+#clear-cart-button:hover {
+    background-color: rgba(179, 0, 0, 0.8);
+}
+
+#checkout-button {
+    background-color: rgba(37, 154, 155, 0.8);
+    color: white;
+}
+
+#checkout-button:hover {
+    background-color: rgba(25, 104, 105, 0.8);
+}

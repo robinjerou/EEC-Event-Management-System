@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+    <link rel="icon" type="image/x-icon" href="assets/resources/favicon.png">
+    <link rel="stylesheet" href="assets/css/update-product-style.css">
+</head>
+
+<body>
+    <header class="banner">
+        <div class="logo-container">
+            <img src="assets/resources/logo.png" alt="Logo" class="logo">
+            <a href="ims-menu.html" class="back-button">Back</a>
+            <div class="logo-text">
+                <!-- Username Here -->
+            </div>
+        </div>
+        <h1 class="title">Update Product</h1>
+        <a href="main-login.html" class="logout">Log Out</a>
+    </header>
+    
+    <div class="content">
+        <div class="form-container">
+            <form action="assets/php/ims-update-products.php" method="POST" class="update-product-form">
+                <div class="form-group">
+                    <label for="productSelect">Select Product:</label>
+                    <select id="productSelect" name="productSelect" required>
+                        <!-- Options will be dynamically loaded here -->
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="productSize">Size:</label>
+                    <input type="text" id="productSize" name="productSize" required>
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Price:</label>
+                    <input type="number" id="productPrice" name="productPrice" step="0.01" min="0" required>
+                </div>
+                <div class="form-group">
+                    <label for="productQuantity">Quantity:</label>
+                    <input type="number" id="productQuantity" name="productQuantity" min="0" required>
+                </div>
+                <button type="submit" class="update-btn">Update</button>
+            </form>
+        </div>
+    </div>
+    <script src="assets/js/ims-fetch-product-options.js"></script>
+    <script src="assets/js/get-user-info.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 80px); /* Adjusted height to accommodate the header */
+    padding: 20px;
+}
+
+.card {
+    width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: rgba(253, 131, 6, 0.8);
+    color: white;
+    padding: 15px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-item-btn {
+    background-color: rgba(37, 154, 155, 0.8);
+    font-size: 18px;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-item-btn:hover {
+    background-color: rgba(25, 104, 105, 0.8);
+}

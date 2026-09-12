@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase History</title>
+    <link rel="icon" type="image/x-icon" href="assets/resources/favicon.png">
+    <link rel="stylesheet" href="assets/css/purchase-history-style.css">
+</head>
+
+<body>
+    <header class="banner">
+        <div class="logo-container">
+            <img src="assets/resources/logo.png" alt="Logo" class="logo">
+            <a href="ims-menu.html" class="back-button">Back</a>
+            <div class="logo-text">
+                Welcome, Placeholder <!-- Replace with actual username -->
+            </div>
+        </div>
+        <h1 class="title">Purchase History</h1>
+        <a href="main-login.html" class="logout">Log Out</a>
+    </header>
+    
+    <div class="content">
+        <div class="table-data">
+            <div class="order">
+                <div class="head">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <button type="button" onclick="filterTable()">Search</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product Name</th>
+                            <th>Total Products<br> Purchased</th>
+                        </tr>
+                    </thead>
+                    <tbody id="purchase-history-body">
+                        <!-- Table rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/ims-fetch-purchase-history.js"></script>
+    <script src="assets/js/get-user-info.js"></script>
+</body>
+</html>
