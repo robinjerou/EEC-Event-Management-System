@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width. initial-scale=1.0">
+        <title></title>
+        <link rel = "stylesheet" href = "main.css">
+        <link href = "https://csn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon/css" rel = "stylesheet"/>
+        <script src = "homescript.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    </head>
+
+
+  <style>   
+.header{
+  border-bottom: 1px solid grey;
+}
+    </style>
+<body>
+     
+        <div class = "header">
+            <nav class = "navbar">
+                <img src = "images/sidelogo.png" class = "logo">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Request.html">Services</a></li>
+                    <li><a href="ex.html">Events</a></li>
+                    <li><a href="About.html">My Account</a></li>
+                  </ul>
+                  <div class="nav-button">
+                    <button class="btn white-btn" id="loginBtn" onclick="login()"><a href="log.php">Login</button></a>
+                    <button class="btn" id="registerBtn" onclick="register()" a href="sign.php">Sign Up</button>
+                </div>
+                <div class="nav-menu-btn">
+                    <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+                </div>
+            </nav>
+        </div>
+
+       
+
+      <section class="home" id="home"> 
+        <div class="box">
+            <video width="1000" loop poster="images/eec.mp4" autoplay loop muted>
+                <source src="images/eec.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+
+    <!-- <section class="intro">
+      <div class="section__container intro__container">
+        <div class="intro__cotent">
+          <p class="section__subheader" style="font-family: 'Poppins', sans-serif;">INTRO VIDEO</p>
+          <h2 class="section__header" style="font-family: 'Poppins', sans-serif;">Meet With Our Luxury Place</h2>
+          <p class="section__description" style="font-family: 'Poppins', sans-serif;">
+            Whether you're seeking a cozy and exclusive hideaway or an immersive
+            journey beneath the surface, Hotel Miranda promises to be an
+            unforgettable stay, where the depths of comfort and excitement await
+            your arrival.
+          </p>
+          <button class="btn" style="font-family: 'Poppins', sans-serif;">Book Now</button>
+        </div>
+        <div class="intro__video">
+          <video src="images/homevid2.mp4" autoplay muted loop></video>
+        </div>
+      </div>
+    </section> -->
+     
+
+    <section class="about" id="about">
+
+        <div class="row">
+           <div class="image">
+              <img src="images/about.jpg" alt="">
+           </div>
+           <div class="content">
+              <h3>About Us</h3>
+              <p>Welcome to EEC Events, where we transform
+                dreams into unforgettable experiences. Established
+                with a passion for exploration and a commitment
+                to excellence, we are a premier travel agency and
+                events management company dedicated to
+                delivering exceptional services to our clients.
+                </p>
+           </div>
+        </div>
+    </section>
+
+    
+
+      <div class = "overlay"></div>
+
+      <section class="gallery" id="gallery">
+        <div class="swiper gallery-slider">
+           <div class="swiper-wrapper">
+              <img src="images/bd.jpg" class="swiper-slide" alt="bd">
+              <img src="images/prom.jpg" class="swiper-slide" alt="prom">
+              <img src="images/expo.jpg" class="swiper-slide" alt="trade show">
+              <img src="images/conference.jpg" class="swiper-slide" alt="conference">
+              <img src="images/pageant.jpg" class="swiper-slide" alt="pageant">
+              <img src="images/wedding.jpg" class="swiper-slide" alt="wedding">
+           </div>
+        </div>
+        <a href="Request.html"><button class = "view__all">View Services Here</button></a>
+     </section>
+
+
+     
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="homescript.js"></script>
+
+    <section class="map top">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14432.96098071227!2d55.3264335!3d25.2625025!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d6d57964eaf%3A0x8021c1b040701e51!2sEEC%20Travel%20and%20Tourism!5e0!3m2!1sen!2sph!4v1710752219883!5m2!1sen!2sph" width="600" height="450" style="border:0;"></iframe>
+    </section>
+
+    <section class="subscribe">
+      <div class="section__container subscribe__container">
+        <h2 class="section__header">Follow and Like Our Social Media Pages</h2>
+        <div class="social-buttons">
+          <a href="https://www.facebook.com/profile.php?id=61555959250983" class="facebook-button">Like Us on Facebook</a>
+          <a href="https://www.instagram.com/your_instagram_profile" class="instagram-button">Follow Us on Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h3>EEC Events</h3>
+          <p>
+            At EEC Events, we believe in the transformative
+            power of travel and the magic of well-executed
+            events. 
+          </p>
+          <p>
+            Let us be your partner in creating
+            extraordinary moments and crafting memories that
+            last a lifetime. Your journey begins with us!
+          </p>
+        </div>
+        <div class="footer__col">
+          <h4>INFORMATION</h4>
+          <p>Home</p>
+          <p>Services</p>
+          <p>Events</p>
+          <p>About</p>
+          <p>Offers</p>
+        </div>
+        <div class="footer__col">
+          <h4>CONTACT</h4>
+          <p>Support</p>
+          <p>Media</p>
+          <p>Socials</p>
+        </div>
+      </div>
+      <div class="section__container footer__bar">
+        <p>@2024 EEC Events | (04) 347 1121 | holidays@eectravels.com | info@eecevent.com</p>
+        <div class="socials">
+          <span><i class="ri-facebook-fill"></i></span>
+          <span><i class="ri-twitter-fill"></i></span>
+          <span><i class="ri-instagram-line"></i></span>
+          <span><i class="ri-youtube-fill"></i></span>
+        </div>
+      </div>
+    </footer>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

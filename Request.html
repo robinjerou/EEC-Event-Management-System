@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width. initial-scale=1.0">
+        <title></title>
+        <link rel = "stylesheet" href = "main.css">
+        <link href = "https://csn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon/css" rel = "stylesheet"/>
+        <script src = "Login.js"></script>
+    </head>
+
+  <style>
+    
+
+/*------------home------------*/
+/*------------about------------*/
+.top {
+  margin-top: 80px;
+}
+
+
+
+h3 {
+  font-size: 35px;
+  font-family: serif;
+  color: #24416B;
+  margin-bottom: 20px;
+}
+
+
+p {
+  line-height: 30px;
+  color: #a4a4a4;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.booking .book-form{
+  padding:2rem;
+  background-color: #F1E5AC;
+}
+
+.booking .book-form .flex{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.booking .book-form .flex .inputBox input{
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.6rem;
+  color: black;
+  text-transform: none;
+  margin-top: 1.5rem;
+  border-radius: 20;
+}
+
+.booking .book-form .flex .inputBox input:focus{
+  background-color: black;
+  color:white;
+}
+
+
+
+
+
+
+
+
+
+
+  </style>
+
+<body>
+
+  <div class = "header">
+    <nav class = "navbar">
+        <img src = "images/sidelogo.png" class = "logo">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Request.html">Services</a></li>
+            <li><a href="ex.html">Events</a></li>
+            <li><a href="About.html">My Account</a></li>
+          </ul>
+          <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()"><a href="log.php">Login</button></a>
+            <button class="btn" id="registerBtn" onclick="register()" a href="sign.php">Sign Up</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+</div>
+     
+        
+
+
+        <section class="section__container popular__container">
+            <h2 class="section__header">Events</h2>
+            <div class="popular__grid">
+              <div class="popular__card">
+                <img src="images/pageant.jpg" alt="popular hotel" />
+                <div class="popular__content">
+                  <div class="popular__card__header">
+                    <h4>Pegeants</h4>
+                    <h4>Price</h4>
+                  </div>
+                  <p>Descrption</p>
+                </div>
+              </div>
+              <div class="popular__card">
+                <img src="images/conference.jpg" alt="popular hotel" />
+                <div class="popular__content">
+                  <div class="popular__card__header">
+                    <h4>Conference</h4>
+                    <h4>Price</h4>
+                  </div>
+                  <p>Descrption</p>
+                </div>
+              </div>
+              <div class="popular__card">
+                <img src="images/expo.jpg" alt="popular hotel" />
+                <div class="popular__content">
+                  <div class="popular__card__header">
+                    <h4>Trade Show</h4>
+                    <h4>Price</h4>
+                  </div>
+                  <p>Descrption</p>
+                </div>
+              </div>
+              <div class="popular__card">
+                <img src="images/bd.jpg" alt="popular hotel" />
+                <div class="popular__content">
+                  <div class="popular__card__header">
+                    <h4>Birthday</h4>
+                    <h4>Price</h4>
+                  </div>
+                  <p>Dubai, United Arab Emirates</p>
+                </div>
+              </div>
+              <div class="popular__card">
+                <img src="images/prom.jpg" alt="popular hotel" />
+                <div class="popular__content">
+                  <div class="popular__card__header">
+                    <h4>Prom</h4>
+                    <h4>Price</h4>
+                  </div>
+                  <p>Tokyo, Japan</p>
+                </div>
+              </div>
+              <div class="popular__card">
+                <img src="images/wedding.jpg" alt="popular hotel" />
+                <div class="popular__content">
+                  <div class="popular__card__header">
+                    <h4>Wedding</h4>
+                    <h4>Price</h4>
+                  </div>
+                  <p>Singapore</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="background">
+            <div class="booking-form">
+                <h2>Beauty Service</h2>
+                <form action="userinputdata.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required>
+      
+                    <label for="number">Contact Number:</label>
+                    <input type="number" name="number" id="number" required>
+      
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+               
+                    <label for="destination">Location:</label>
+                    <input type="text" name="destination" id="destination" required>
+               
+                    <label for="departure-date">Reserved Date:</label>
+                    <input type="date" name="departure-date" id="departure-date" required>
+                    
+                    <label for="destination">Service Type:</label>
+                    <select type="text" name="Service" id="Service" required> 
+                      <option value="1">Makeup Artist</option>
+                      <option value="2">Hairstylist</option>
+                      <option value="3">Masseur</option>
+                      <option value="4">Barber</option>
+                      <option value="5">Waxing Therapist</option>
+                      <option value="6">Bridal</option>
+                      <option value="7">Nail Technician</option>
+                      <option value="8">Beauty Technician</option>
+                    </select>
+                    
+                    
+                    <label for="destination">Number of People:</label>
+                    <input type="text" name="Service" id="destination" required>
+      
+                     <label for="destination">Customization Requirement:</label>
+                    <input type="text" name="Service" id="destination" required>
+                    
+      
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+      
+          <section class="client">
+            <div class="section__container client__container">
+              <h2 class="section__header">Beauty</h2>
+              <div class="client__grid">
+                <div class="client__card">
+                  <img src="images/make.jpg" alt="client" />
+                  <h4>Makeup</h4>
+                  <p>
+                    For special events, photoshoots, or everyday wear such as Pageant or Proms.
+                    They use various techniques and products to achieve desired looks.
+                  </p>
+                </div>
+                <div class="client__card">
+                  <img src="images/hair.jpeg" alt="client" />
+                  <h4>Hairstyles</h4>
+                  <p>
+                    Provides services related to hair care and styling. 
+                    This can include haircuts, coloring, styling, treatments, and hair extensions
+                  </p>
+                </div>
+                <div class="client__card">
+                  <img src="images/spa.jpg" alt="client" />
+                  <h4>Massage</h4>
+                  <p>
+                    Offers massage therapy to clients to promote relaxation, relieve muscle tension, and alleviate stress.
+                  </p>
+                </div>
+                <div class="client__card">
+                  <img src="images/barber.jpg" alt="client" />
+                  <h4>Barber</h4>
+                  <p>
+                    Men's hair care and grooming services. 
+                    This can include haircuts, beard trims, shaves, and facial hair grooming
+                  </p>
+                </div>
+                <div class="client__card">
+                  <img src="images/wax.jpg" alt="client" />
+                  <h4>Waxing</h4>
+                  <p>
+                    Provides hair removal services using waxing techniques. 
+                    They remove unwanted hair from various parts of the body, such as the legs, arms, face, and bikini area, using hot or cold wax.
+                  </p>
+                </div>
+                <div class="client__card">
+                  <img src="images/wedding.jpg" alt="client" />
+                  <h4>Bridal</h4>
+                  <p>
+                    A range of beauty treatments tailored specifically for brides-to-be. 
+                    This can include hair styling, makeup application, skincare treatments, and manicures/pedicures to ensure the bride looks radiant on her wedding day.
+                  </p>
+                </div>
+                <div class="client__card">
+                  <img src="images/nail.jpg" alt="client" />
+                  <h4>Nail</h4>
+                  <p>
+                    Includes manicures, pedicures, nail extensions, and nail art. 
+                    It provide treatments to improve the appearance and health of nails and offer a variety of nail polish and designs
+                  </p>
+                </div>
+                <div class="client__card">
+                  <img src="images/beauty.jpg" alt="client" />
+                  <h4>Beauty</h4>
+                  <p>
+                    offers a wide range of beauty treatments and services, 
+                    which may include skincare treatments, facials, eyebrow shaping, eyelash extensions, and other cosmetic enhancements to help clients look and feel their best.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </section>
+    </div>
+
+    
+
+  <section class="customer top" id="testimonials">
+    <div class="container">
+      <div class="heading">
+        <h5>Personnel </h5>
+        <h3>Exclusive Offered Services</h3>
+      </div>
+
+      <div class="owl-carousel owl-theme mtop">
+        <div class="item">
+          <div class="rate">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Professionals and Standards</h3>
+          <p>Highly respected and influential hairstylist in the beauty and entertainment industries, renowned for her exceptional skills and creative vision. Born and raised in Chicago, Kimble's passion for hairstyling began at a young age, influenced by her mother who was also a hairstylist.
+          One of Kimble's defining skills is her versatility in hairstyling. She is proficient in a wide range of techniques, from classic cuts and styles to avant-garde and editorial looks. Her expertise extends beyond hairstyling to include wig-making and hair extensions.
+          </p>
+          <div class="admin flex">
+            <div class="img">
+              <img src="images/hairstylist.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>Charlotte Tilbury</h3>
+              <span>Hairstylist</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="rate">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p>Charlotte Tilbury is a highly esteemed makeup artist and beauty entrepreneur known for her exceptional skills and transformative makeup techniques. Born in London, Tilbury developed a passion for makeup at a young age, influenced by her artistic upbringing and love for glamour. 
+          Her highlighted defining skills is her ability to enhance natural beauty while creating iconic, glamorous looks. She has a keen eye for color, symmetry, and balance, allowing her to accentuate her clients' features in a way that is both flattering and impactful.
+          </p>
+          <div class="admin flex">
+            <div class="img">
+              <img src="images/makeup.jpg" alt="">
+            </div>
+            <div class="text">
+              <h3>Ayman Jensi</h3>
+              <span>Makeup Artist</span>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="rate">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <h3>Excellent Swimming</h3>
+          <p>She is known for her pioneering research on the effects of chiropractic adjustments on the central nervous system (CNS) and brain function, and originally from New Zealand
+          Dr. Haavik's key skills lies in her ability to bridge the gap between chiropractic practice and scientific research
+          </p>
+          <div class="admin flex">
+            <div class="img">
+              <img src="images/chiropractor.jpeg" alt="">
+            </div>
+            <div class="text">
+              <h3>Dr. Heidi Haavik</h3>
+              <span>Chiropractor</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      dots: false,
+      navText: ["<i class='far fa-long-arrow-alt-left'></i>", "<i class='far fa-long-arrow-alt-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

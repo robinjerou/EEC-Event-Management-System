@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width=device-width. initial-scale=1.0">
+        <title></title>
+        <link rel = "stylesheet" href = "main.css">
+        <link href = "https://csn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon/css" rel = "stylesheet"/>
+        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+        <script src = "Login.js"></script>
+    </head>
+
+
+    <style>
+        div{
+            position: relative;
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        .navbar ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #F1E5AC;
+            white-space: nowrap;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+       
+        li a:hover {
+            background-color: #111;
+        }
+        body {
+        background: #f5f5f5;
+        margin-top: 20px;
+        }
+
+.ui-w-80 {
+    width : 80px;
+    height: auto;
+}
+
+.btn-default {
+    border-color: rgba(24, 28, 33, 0.1);
+    background  : rgba(0, 0, 0, 0);
+    color       : #4E5155;
+}
+
+label.btn {
+    margin-bottom: 0;
+}
+
+.btn-outline-primary {
+    border-color: #26B4FF;
+    background  : transparent;
+    color       : #26B4FF;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.text-light {
+    color: #babbbc;
+}
+
+.card {
+    background-clip: padding-box;
+    box-shadow     : 0 1px 4px rgba(24, 28, 33, 0.012);
+}
+
+.row-bordered {
+    overflow: hidden;
+}
+
+.account-settings-fileinput {
+    position  : absolute;
+    visibility: hidden;
+    width     : 1px;
+    height    : 1px;
+    opacity   : 0;
+}
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for container */
+.container {
+    width: 100%;
+    max-width: 1140px; /* Adjust this as per your layout */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Styles for row */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Styles for columns */
+.col-md-12 {
+    flex: 0 0 100%; /* Adjust width as per your layout */
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.content-wrapper {
+    border: 2px solid #fff; /* Adjust border properties as needed */
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #fff; /* Optional: You can also set background color to white */
+    max-width: 800px; /* Set maximum width */
+    margin: 0 auto;
+}
+
+.list-group ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list-group ul li {
+    display: block;
+}
+
+.list-group ul li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 1px solid transparent; /* Optional: Add border to separate buttons */
+    background-color: #F1E5AC;
+}
+
+.list-group ul li a:hover {
+    background-color: #f5f5f5; 
+    border-radius: 4px;
+}
+
+
+    </style>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <img src="images/sidelogo.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Request.html">Services</a></li>
+                <li><a href="ex.html">Events</a></li>
+                <li><a href="About.html">My Account</a></li>
+            </ul>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()"><a href="test.html">Login</a></button>
+                <button class="btn" id="registerBtn" onclick="register()"><a href="test.html">Sign Up</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Content -->
+    <div class="content-wrapper">
+        <h2 class="font-weight">Account Settings</h2>
+        <div class="card">
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- Account Settings Links -->
+                    <div class="list-group list-group-flush account-settings-links">
+                        <ul>
+                            <li><a class="list-group-item list-group-item-action active" data-toggle="list" href="#account-general">General</a></li>
+                            <li><a class="list-group-item list-group-item-action" data-toggle="list" href="#account-change-password">Change Password</a></li>
+                            <li><a class="list-group-item list-group-item-action" data-toggle="list" href="#account-info">Info</a></li>
+                            <li><a class="list-group-item list-group-item-action" data-toggle="list" href="#account-social-links">Social Accounts</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <!-- Tab Content -->
+                    <div class="tab-content">
+                        <!-- General Account Settings -->
+                        <div class="tab-pane active" id="account-general">
+                            <div class="card-body">
+                                <!-- Profile Picture -->
+                                <div class="profile-picture">
+                                    <img src="images/pfp art.jpg" alt="Profile Picture" class="ui-w-80">
+                                    <div class="media-body">
+                                        <label class="btn btn-outline-primary">
+                                            Upload new photo
+                                            <input type="file" class="account-settings-fileinput">
+                                        </label>
+                                        <button type="button" class="btn btn-outline-secondary">Reset</button>
+                                        <div class="text-light small mt-1">Allowed JPG, GIF or PNG. Max size of 800K</div>
+                                    </div>
+                                </div>
+                                <!-- General Account Info Form -->
+                                <form>
+                                    <div class="form-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" class="form-control" id="username" value="nmaxwell">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" class="form-control" id="name" value="Nelle Maxwell">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">E-mail</label>
+                                        <input type="email" class="form-control" id="email" value="nmaxwell@mail.com">
+                                        <div class="alert alert-warning mt-3">
+                                            Your email is not confirmed. Please check your inbox.<br>
+                                            <a href="javascript:void(0)">Resend confirmation</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="company">Company</label>
+                                        <input type="text" class="form-control" id="company" value="Company Ltd.">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Change Password -->
+                        <div class="tab-pane" id="account-change-password">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="current-password">Current Password</label>
+                                        <input type="password" class="form-control" id="current-password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="new-password">New Password</label>
+                                        <input type="password" class="form-control" id="new-password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="confirm-password">Confirm New Password</label>
+                                        <input type="password" class="form-control" id="confirm-password">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Additional Info -->
+                        <div class="tab-pane" id="account-info">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="bio">Bio</label>
+                                        <textarea class="form-control" id="bio" rows="5"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="birthday">Birthday</label>
+                                        <input type="text" class="form-control" id="birthday" value="May 3, 1995">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="country">Country</label>
+                                        <select class="custom-select" id="country">
+                                            <option>USA</option>
+                                            <option selected>Canada</option>
+                                            <option>UK</option>
+                                            <option>Germany</option>
+                                            <option>France</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone</label>
+                                        <input type="text" class="form-control" id="phone" value="+0 (123) 456 7891">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="website">Website</label>
+                                        <input type="text" class="form-control" id="website">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Social Accounts -->
+                        <div class="tab-pane" id="account-social-links">
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="facebook">Facebook</label>
+                                        <input type="text" class="form-control" id="facebook" value="https://www.facebook.com/user">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="google">Google</label>
+                                        <input type="text" class="form-control" id="google">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="instagram">Instagram</label>
+                                        <input type="text" class="form-control" id="instagram" value="https://www.instagram.com/user">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Save & Cancel Buttons -->
+        <div class="text-right mt-3">
+            <button type="button" class="btn btn-primary btn-lg">Save Changes</button>
+            <button type="button" class="btn btn-secondary btn-lg">Cancel</button>
+        </div>
+    </div>
+    
+      
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

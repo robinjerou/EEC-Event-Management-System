@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title> Booking Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="exs.css">
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+
+
+</head>
+
+<body>
+  <section class="head">
+    <div class="container flex1">
+      <div class="scoial">
+        <a href = "https://www.facebook.com/profile.php?id=61555959250983"><i class="fab fa-facebook-f"></i></a>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+     
+      <div class="address">
+        <i class="fas fa-map-marker-alt"></i>
+        <span>106, Alowis Building, Al Khabaisi, Port Saeed </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- <video width="1000" loop poster="images/eec.mp4" autoplay loop muted>
+    <source src="images/eec.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video> -->
+
+  <header class="header">
+    <div class="container">
+      <nav class="navbar flex1">
+        <div class="sticky_logo logo">
+          <img src="images/sidelogo.png" alt="">
+        </div>
+
+        <ul class="nav-menu">
+          <li> <a href="index.html">Home</a> </li>
+          <li> <a href="Request.html">Services</a> </li>
+          <li> <a href="ex.html">Events</a> </li>
+          <li> <a href="account.php">My Account</a> </li>
+          <li> <a href="#testimonials">testimonials</a> </li>
+          <li> <a href="#Contact">contact</a> </li>
+        </ul>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+
+        <div class="head_contact">
+          <i class="fas fa-phone-volume"></i>
+          <span>+971 50 206 5719</span>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", mobliemmenu);
+
+    function mobliemmenu() {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    window.addEventListener("scroll", function() {
+      var header = document.querySelector("header");
+      header.classList.toggle("sticky", window.scrollY > 0)
+    })
+  </script>
+
+
+  <section class="home" id="home">
+    <div class="container">
+      <h1>EEV Events</h1>
+      <p>Event Planner · Sports Event · Performance & Event Venue</p>
+
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="container">
+      <div class="heading">
+        <h5>EVENTS</h5>
+        <h2>Recent Published Project
+        </h2>
+      </div>
+
+      <div class="content flex  top">
+        <div class="left">
+          <h3>Latest Event
+          </h3>
+          <p>We are excited to announce the official candidate for Little Miss Princess 2024! Your participation is crucial, and we are thrilled to open the doors for our online voting
+            for the Social Media Princess. </p>
+          <p> Make sure to cast your vote for the Little Social Media Princess Award by liking and sharing your favorite candidate's post</p>
+          <!-- <button class="flex1">
+            <span>Check Availability</span>
+            <i class="fas fa-arrow-circle-right"></i>
+          </button> -->
+        </div>
+        <div class="right">
+          <img src="images/marga.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="wrapper" id="testimonials">
+    <div class="container">
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <div class="heading">
+            <h5>Actor and Actresses</h5>
+            <h3>Celebrity Greetings</h3>
+          </div>
+          <!-- <video max-width="100%" object-fit ="" loop poster="images/eec.mp4" autoplay loop muted>
+            <source src="images/actor4.mp4" type="video/mp4">
+          </video> -->
+          <!-- <video width="400" controls autoplay loop> -->
+          <video width="400" controls muted>
+            <source src="images/actor4.mp4" >
+            Your browser does not support HTML video.
+          </video>
+        </div>
+        <div class="item">
+          <div class="heading">
+            <h5>Actor and Actresses</h5>
+            <h3>Celebrity Greetings</h3>
+          </div>
+          <video width="400" controls>
+            <source src="images/actor1.mp4" >
+          </video>
+        </div>
+        <div class="item">
+          <div class="heading">
+            <h5>Actor and Actresses</h5>
+            <h3>Celebrity Greetings</h3>
+          </div>
+          <video width="400" controls>
+            <source src="images/actor2.mp4" >
+          </video>
+        </div>
+        <div class="item">
+            <div class="heading">
+              <h5>Actor and Actresses</h5>
+              <h3>Celebrity Greetings</h3>
+            </div>
+            <video width="400" controls>
+                <source src="images/actor3.mp4" >
+              </video>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='far fa-long-arrow-alt-left'></i>", "<i class='far fa-long-arrow-alt-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+
+
+  
+
+
+  <section class="room wrapper2 top" id="room">
+    <div class="container">
+      <div class="heading">
+        <h5>Core Values</h5>
+        <h2>Reasons why to Choose EEC Events Company Profile</h2>
+      </div>
+      <div class="content flex mtop">
+        <div class="left grid2">
+          <div class="box">
+            <i class="fas fa-desktop"></i>
+            <p>Prioritize our clients' needs and preferences</p>
+            <h3>Customer-Centric Approach</h3>
+          </div>
+          <div class="box">
+            <i class="fas fa-dollar-sign"></i>
+            <p>Meticulous trip planning to flawless event execution.</p>
+            <h3>Excellence</h3>
+          </div>
+          <div class="box">
+            <i class="fab fa-resolving"></i>
+            <p>Embrace creativity to provide cutting-edge solutions exciting and ahead of the curve</p>
+            <h3>Innovation</h3>
+          </div>
+          <div class="box">
+            <i class="fal fa-alarm-clock"></i>
+            <p>Operate with transparency and moral compass, fostering trust and long-lasting relationships</p>
+            <h3>Integrity</h3>
+          </div>
+          <div class="box">
+            <i class="fas fa-mug-hot"></i>
+            <p>Collaboration is at the heart of our success by culture of mutual respect, and continuous learning among our diverse team of experts</p>
+            <h3>Teamwork</h3>
+          </div>
+          <div class="box">
+            <i class="fas fa-user-tie"></i>
+            <p>Dedicated to delivering the highest standards of service, support output, and satistfaction among events and relations throughout</p>
+            <h3>Quality</h3>
+          </div>
+        </div>
+        <div class="right">
+          <img src="images/about.jpg" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="timer about wrapper" id ="Contact">
+    <div class="background"> </div>
+    <div class="container">
+      <div class="heading">
+        <h5>CONTACT US!</h5>
+        <h2><span>Number: </span>+971 50 206 5719</h2>
+      </div>
+
+      <div id="time" class="flex1 mtop"> </div>
+    </div>
+  </section>
+  <script src="js/jquery.countdown.js" charset="utf-8"></script>
+  <script src="js/jquery.countdown.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $('#time').countdown('2024/01/01', function(event) {
+      $(this).html(event.strftime(
+        '<div class="clock"><span>%d</span> <p>Days</p></div> ' +
+        '<div class="clock"><span>%H</span> <p>Hours</p></div> ' +
+        '<div class="clock"><span>%M</span> <p>Minutes</p></div> ' +
+        '<div class="clock"><span>%S</span> <p>Seconds</p></div> '
+      ));
+    });
+  </script>
+
+
+  <section class="offer mtop" id="services">
+    <div class="container">
+      <div class="heading">
+        <h5>EXCLUSIVE OFFERS </h5>
+        <h3>Occasion Listing</h3>
+      </div>
+
+      <div class="content grid2 mtop">
+        <div class="box flex">
+          <div class="left">
+            <img src="images/makati.png" alt="">
+          </div>
+          <div class="right">
+            <h4>For Meetings</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p> Location: 1026 A. Arnaiz Avenue San Lorenzo Village, Makati City 1223 Metro Manila, Philippines</p>
+            <h5>Inquire for Price</h5>
+            <form class="booking-form" action="book.php" method="post">
+              <input type="hidden" name="offer_id" value="1"> <!-- Offer ID -->
+              <button class="flex1" type="submit">
+                <i class="fas fa-arrow-circle-right"></i> Book Now
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <img src="images/crimson.jpg" alt="">
+          </div>
+          <div class="right">
+            <h4>Proms</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>Location: Tomas Morato Avenue Diliman, Quezon City, Diliman, Quezon City, 1101 Metro Manila, Philippines</p>
+            <h5>Inquire for Price</h5>
+            <form class="booking-form" action="book.php" method="post">
+              <input type="hidden" name="offer_id" value="1"> <!-- Offer ID -->
+              <button class="flex1" type="submit">
+                <i class="fas fa-arrow-circle-right"></i> Book Now
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <img src="images/crown.jpg" alt="">
+          </div>
+          <div class="right">
+            <h4>Photoshoot</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>Location: Grendale inteenational Auditorium, Oud Metha Bur Dubai</p>
+            <h5>Inquire for Price</h5>
+            <button class="flex1">
+           
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="box flex">
+          <div class="left">
+            <img src="images/garden.png" alt="">
+          </div>
+          <div class="right">
+            <h4>Blue Gardens</h4>
+            <div class="rate flex">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p>Location: #28 Samonte St. via North Zuzuaregui, Brgy. Old Balara, Commonwealth Ave., Quezon City.</p>
+            <h5>Inquire for Price</h5>
+            <button class="flex1">
+              <i class="fas fa-arrow-circle-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="area top">
+    <div class="container">
+      <div class="heading">
+        <h5>RESERVATION PLANNER</h5>
+        <h3>Event Service</h3>
+      </div>
+
+      <div class="content flex mtop">
+        <div class="left">
+            <video width="1000" loop poster="images/eecshowcase.mp4" autoplay loop muted>
+                <source src="images/eecshowcase.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="right">
+          <ul>
+            <li>Pageants </li>
+            <li>Proms</li>
+            <li>Retreats</li>
+            <li>Concerts</li>
+            <li>Art Exhibitions</li>
+            <li>And more...</li>
+          </ul>
+
+          <div class="background">
+            <div class="booking-form">
+                <h2>Event Service</h2>
+                <form action="index.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required>
+      
+                    <label for="number">Contact Number:</label>
+                    <input type="number" name="number" id="number" required>
+      
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+               
+                    <label for="destination">Location:</label>
+                    <input type="text" name="destination" id="destination" required>
+               
+                    <label for="departure-date">Reserved Date:</label>
+                    <input type="date" name="departure-date" id="departure-date" required>
+                    
+                    <label for="destination">Service Type:</label>
+                    <select type="text" name="Service" id="Service" required> 
+                      <option value="1">Pageants</option>
+                      <option value="2">Conference</option>
+                      <option value="3">Trade Show</option>
+                      <option value="4">Sports</option>
+                      <option value="5">Birthday</option>
+                      <option value="6">Prom</option>
+                      <option value="7">Wedding</option>
+                    </select>
+                    
+                    <label for="destination">Other Events:</label>
+                    <input type="text" name="Service" id="destination" required>
+                    
+                    <label for="destination">Number of People:</label>
+                    <input type="text" name="Service" id="destination" required>
+      
+                     <label for="destination">Customization Requirement:</label>
+                    <input type="text" name="Service" id="destination" required>
+                    
+      
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="gallary top" id="gallary">
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="images/g1.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/g2.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/g3.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/g4.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/g5.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/g6" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/g7.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+      <div class="item">
+        <img src="images/g8.jpg" alt="">
+        <div class="overlay">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: false,
+      autoplay: true,
+      slideTransition: 'linear',
+      autoplayTimeout: 4000,
+      autoplaySpeed: 4000,
+      autoplayHoverPause: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 3
+        },
+        1000: {
+          items: 5
+        }
+      }
+    })
+
+    $(document).ready(function() {
+  $('.booking-form').submit(function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    var form = $(this);
+    var url = form.attr('action');
+    var formData = form.serialize(); // Serialize form data
+
+    // Send AJAX request
+    $.ajax({
+      type: 'POST',
+      url: url,
+      data: formData,
+      success: function(response) {
+        // Handle success response (if needed)
+        console.log(response);
+        // Reload the page or update the UI as required
+        location.reload();
+      },
+      error: function(xhr, status, error) {
+        // Handle error
+        console.error(xhr.responseText);
+      }
+    });
+  });
+});
+
+  </script>
+
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14432.96098071227!2d55.3264335!3d25.2625025!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d6d57964eaf%3A0x8021c1b040701e51!2sEEC%20Travel%20and%20Tourism!5e0!3m2!1sen!2sph!4v1710752219883!5m2!1sen!2sph" width="600" height="450" style="border:0;"></iframe>
+  </section>
+
+
+  <footer>
+    <div class="container top">
+        <div class="box">
+          <div class="logo">
+            <img src="image/logo.png" alt="">
+          </div>
+          <p> </p>
+          <div class="social flex">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+
+        <div class="box">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><i class="fas fa-angle-double-right"></i>Beauty</li>
+            <li><i class="fas fa-angle-double-right"></i>Event</li>
+            <li><i class="fas fa-angle-double-right"></i>ABout Us</li>
+            <li><i class="fas fa-angle-double-right"></i>Reservation</li>
+            <li><i class="fas fa-angle-double-right"></i>Contact</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
